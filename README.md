@@ -496,6 +496,14 @@ UUID                                      Email           Droplet Limit  Email V
 58e2e737d3b7407b042aa7f99f4da4229166f2a1  joe@example.com 10             true
 ```
 
+## Using from Docker
+
+```shell
+docker build -t digital-ocean .
+docker run -t -v ~/.chef/knife.rb:/root/.chef/knife.rb:ro -i digital-ocean digital_ocean -VV account info
+```
+
+
 ## Contributing
 
 1. Fork it
